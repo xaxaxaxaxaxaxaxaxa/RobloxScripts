@@ -101,7 +101,7 @@ local namecall; do
     namecall = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
         local namecall_method, arguments = (getnamecallmethod or get_namecall_method)(), {...};
 
-        if (namecall_method == "Raycast" or namecall_method == "raycast") and self == workspace and framework("CanHookRaycast") and (game.PlaceId == 8278412720 and getcallingscript().Name == "ACS_Framework") then 
+        if (namecall_method == "Raycast" or namecall_method == "raycast") and self == workspace and framework("CanHookRaycast") and getcallingscript().Name == "ACS_Framework" then 
             arguments[2] = ((SilentAimTargetPart.Position - arguments[1]).Unit * 1000);
         end
         
