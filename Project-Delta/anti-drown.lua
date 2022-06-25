@@ -27,3 +27,7 @@ coroutine.resume(coroutine.create(function()
         waterBlur.Enabled = false -- lazy way of doing this
     end);
 end));
+
+if printconsole then 
+    printconsole("anti-drown loaded")
+end
