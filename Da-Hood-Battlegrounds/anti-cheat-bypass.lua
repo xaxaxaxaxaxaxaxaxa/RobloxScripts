@@ -1,3 +1,4 @@
+-- Hold E to shoot your guns very fast, works best with Revolver
 -- init
 if not game:IsLoaded() then 
     game.Loaded:Wait();
