@@ -34,7 +34,9 @@ runService.RenderStepped:Connect(function()
         if client.Character and client.Character:FindFirstChildOfClass("Tool") then
             local tool = client.Character:FindFirstChildOfClass("Tool");
             
-            toolRemoteEvents[((tool.Name ~= "Revolver" and tool.Name) or "Rev")]:FireServer(mouse.Hit.Position, tool);
+            local specialToolName = (((tool.Name == "TacticalShotgun" and "TactShotGun") or (tool.Name == "Revolver" and "Rev")) or tool.Name);
+            
+            toolRemoteEvents[specialToolName]:FireServer(mouse.Hit.Position, tool);
             reloadWeapon:FireServer();
         end
     end
